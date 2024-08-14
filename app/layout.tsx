@@ -9,6 +9,8 @@ import {
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { Toaster } from "@/components/ui/sonner"
+
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button";
@@ -90,6 +92,7 @@ export default async function RootLayout({
         <main>
           <ModalProvider />
           {children}
+          <Toaster position="top-right" richColors />
         </main>
       </body>
     </html>
